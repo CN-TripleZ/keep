@@ -8,4 +8,10 @@
 	<name>Keep Platform Webapp</name>
 	<description>web应用</description>
 	
+	<dependencies>
+		<dependency>
+		  <groupId>com.keep.platform</groupId>
+		  <artifactId>kp-service</artifactId>
+		</dependency>
+	</dependencies>	
 </project>
