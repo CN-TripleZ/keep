@@ -11,6 +11,7 @@
 	<modules>
 		<module>kp-infrastructure</module>
 		<module>kp-entity</module>
+		<module>kp-dao</module>
 		<module>kp-service</module>
 		<module>kp-web</module>
 	</modules>
