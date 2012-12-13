@@ -11,7 +11,13 @@
 	<dependencies>
 		<dependency>
 		  <groupId>com.keep.platform</groupId>
-		  <artifactId>kp-dao</artifactId>
+		  <artifactId>kp-dao-api</artifactId>
+		  <version>1.0.0</version>
 		</dependency>
+		<dependency>
+		  <groupId>com.keep.platform</groupId>
+		  <artifactId>kp-dao-impl</artifactId>
+		  <version>1.0.0</version>
+		</dependency>		
 	</dependencies>	
 </project>

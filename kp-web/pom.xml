@@ -12,6 +12,7 @@
 		<dependency>
 		  <groupId>com.keep.platform</groupId>
 		  <artifactId>kp-service</artifactId>
+		  <version>1.0.0</version>
 		</dependency>
 	</dependencies>	
 </project>

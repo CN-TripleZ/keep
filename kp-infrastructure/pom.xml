@@ -2,16 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.keep.platform</groupId>
-	<artifactId>kp-master</artifactId>
+	<artifactId>kp-infrastructure</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0.0</version>
-	<name>Keep Platform</name>
-	<description>Keep Platform - zhangchaozheng</description>
+	<name>Keep Infrastructure</name>
+	<description>Keep Infrastructure</description>
 	
 	<modules>
-		<module>kp-infrastructure</module>
-		<module>kp-entity</module>
-		<module>kp-service</module>
-		<module>kp-web</module>
+		<module>kp-util</module>
+		<module>kp-dao-api</module>
+		<module>kp-dao-impl</module>
 	</modules>
 </project>
