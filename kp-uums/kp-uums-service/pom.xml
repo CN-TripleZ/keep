@@ -2,22 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.keep.platform</groupId>
-	<artifactId>kp-dao</artifactId>
+	<artifactId>kp-uums-service</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
-	<name>Keep Platform Dao</name>
-	<description>Keep Platform Dao</description>
+	<name>Keep Platform UUMS Service</name>
+	<description>UUMS系统服务</description>
 	
 	<dependencies>
 		<dependency>
 		  <groupId>com.keep.platform</groupId>
-		  <artifactId>kp-infrastructure-dao-api</artifactId>
+		  <artifactId>kp-uums-dao</artifactId>
 		  <version>1.0.0</version>
-		</dependency>
-		<dependency>
-		  <groupId>com.keep.platform</groupId>
-		  <artifactId>kp-infrastructure-dao-impl</artifactId>
-		  <version>1.0.0</version>
-		</dependency>		
+		</dependency>	
 	</dependencies>	
 </project>
