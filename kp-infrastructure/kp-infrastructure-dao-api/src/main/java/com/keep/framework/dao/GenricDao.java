@@ -9,47 +9,54 @@ import java.util.List;
  * @author zhangchaozheng
  * 	
  */
-public interface GenricDao<E extends Serializable, K extends Serializable> {
+public interface GenricDao {
 
 	/***
 	 * 通过主键查找相应实体对象
-	 * @param key	主键
+	 * @param entityClass 实体对象class
+	 * @param id	主键
 	 * @return 		实体对象
 	 */
-	E get(K key) throws Throwable;
+	@SuppressWarnings("rawtypes") 
+	Object get(Class entityClass, Serializable id) throws Throwable;
 	
 	/***
 	 * 通过主键加载相应实体对象
-	 * @param key	主键
+	 * @param entityClass 实体对象class
+	 * @param id	主键
 	 * @return 		实体对象
 	 */
-	E load(K key) throws Throwable;
+	@SuppressWarnings("rawtypes")
+	Object load(Class entityClass, Serializable id) throws Throwable;
 	
 	/***
+	 * @param entityClass 实体对象class
 	 * @return	所有实体对象
 	 */
-	List<E> loadAll() throws Throwable; 
+	@SuppressWarnings("rawtypes") 
+	List loadAll(Class entityClass) throws Throwable; 
 	
 	/***
 	 * 删除一个实体对象
 	 * @param entity 修改实体
 	 * @throws Throwable 异常
 	 */
-	void delete(E entity) throws Throwable;
+	void delete(Object entity) throws Throwable;
 	
 	/***
 	 * 批量删除实体对象
 	 * @param entities 修改实体
 	 * @throws Throwable 异常
 	 */
-	void deleteAll(Collection<E> entities) throws Throwable;
+	@SuppressWarnings("rawtypes")
+	void deleteAll(Collection entities) throws Throwable;
 	
 	/***
 	 * 更新一个实体对象
 	 * @param entity 更新实体
 	 * @throws Throwable 异常
 	 */
-	void update(E entity) throws Throwable;
+	void update(Object entity) throws Throwable;
 	
 	
 	/***
@@ -57,14 +64,15 @@ public interface GenricDao<E extends Serializable, K extends Serializable> {
 	 * @param entity 实体对象
 	 * @throws Throwable 异常
 	 */
-	void saveOrUpdate(E entity) throws Throwable;
+	void saveOrUpdate(Object entity) throws Throwable;
 	
 	/***
 	 * 当不存存该实体对象时，则保存;否则更新一个实体对象
 	 * @param entity 实体对象
 	 * @throws Throwable 异常
 	 */
-	void saveOrUpdateAll(Collection<E> entities) throws Throwable;	
+	@SuppressWarnings("rawtypes")
+	void saveOrUpdateAll(Collection entities) throws Throwable;	
 	
 	/***
 	 * @param hql 		使用hql,查询数据
@@ -119,15 +127,24 @@ public interface GenricDao<E extends Serializable, K extends Serializable> {
     void executeSql(String sql) throws Throwable;
     
     /***
-     * 查找一个
-     * @param hql
-     * @param params
-     * @param offset
-     * @param pageSize
-     * @return
-     * @throws Throwable
+     * 分页查找对象
+     * @param hql			使用hql进行查询
+     * @param params		hql语句参数 
+     * @param offset		起始记录
+     * @param pageSize		每页记录数量
+     * @return				对象集合
      */
     @SuppressWarnings("rawtypes")
 	List findByPage(final String hql, final List params,
 			final int offset, final int pageSize) throws Throwable;
+    
+    /***
+     * 分页查找对象
+     * @param entityClass	实体对象class
+     * @param offset		起始记录
+     * @param pageSize		每页记录数量
+     * @return				对象集合
+     */
+    @SuppressWarnings("rawtypes")
+    List findByPage(Class entityClass, final int offset, final int pageSize) throws Throwable;
 }

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 	
-	private Long Id;
+	private Long id;
 	
 	private String name;
 	
@@ -15,11 +15,11 @@ public class User implements Serializable {
 	private String email;
 
 	public Long getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getName() {

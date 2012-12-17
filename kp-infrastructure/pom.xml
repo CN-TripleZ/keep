@@ -12,5 +12,7 @@
 		<module>kp-infrastructure-util</module>
 		<module>kp-infrastructure-dao-api</module>
 		<module>kp-infrastructure-dao-impl</module>
+		<module>kp-infrastructure-service-api</module>
+		<module>kp-infrastructure-service-impl</module>
 	</modules>
 </project>
